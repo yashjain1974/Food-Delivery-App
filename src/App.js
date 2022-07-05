@@ -1,8 +1,12 @@
+import React from "react";
+
+import Header from "./components/Layers/Header";
 function App() {
   return (
-    <div>
-      <h2>Food Delivery App</h2>
-    </div>
+    <React.Fragment>
+      <Header></Header>
+    </React.Fragment>
+     
   );
 }
 
