@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 5rem;
-    background-color: #371a0f;
+    background-color: #46ae3d;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -16,16 +16,18 @@
   
   .main-image {
     width: 100%;
-    height: 100%;
-    z-index: 0;
-    overflow: hidden;
+    height: 30%;
+    z-index: -10; 
+    /* overflow: hidden; */
+    /* background-image: url('../../images/header_image1.jpg'); */
     
   }
   
   .main-image img {
     width: 100%;
-    height: 100%;
+    height: 40%;
+    z-index: -1; 
     
-    /* transform: rotateZdeg) translateY(-4rem) translateX(-1rem); */
-    opacity: 0.5;
+    transform: rotateZdeg(5%) translateY(-4rem) translateX(-1rem);
+    opacity: 0.1;
   }
