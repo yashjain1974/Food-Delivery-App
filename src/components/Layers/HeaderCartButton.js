@@ -5,7 +5,7 @@ import CartIcon from "../Food Cart/CartIcon";
 const HeaderCartButton=props=>{
     return(
         <React.Fragment>
-            <button className={classes.button}>
+            <button className={classes.button} onClick={props.onClick}>
                 <span className={classes.icon}>
                     <CartIcon></CartIcon>
 
