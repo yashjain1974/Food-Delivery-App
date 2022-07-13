@@ -45,16 +45,16 @@ const AvailableMeals = (props) => {
       );
       const data = await response.json();
 
-      const loadedData = [];
+      const loadData = [];
       for (let key in data) {
-        loadedData.push({
+        loadData.push({
           id: key,
           name: data[key].name,
           description: data[key].description,
           price: data[key].price,
         });
       }
-      setMeals(loadedData);
+      setMeals(loadData);
     };
     fetchMeals();
   }, []);
