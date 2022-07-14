@@ -24,7 +24,7 @@ const Checkout = (props) => {
     const isValidEnteredName = !(enteredName.trim() === "");
     const isValidEnteredAddress = !(enteredAddress.trim() === "");
     const isValidEnteredPostal = !(enteredPostal.trim().length === 5);
-    const isValidEnteredCity = !(enteredCity.trim()=== "");
+    const isValidEnteredCity = !(enteredCity.trim() === "");
 
     setIsformValidity({
       name: isValidEnteredName,
@@ -42,6 +42,12 @@ const Checkout = (props) => {
     if (!formIsValid) {
       return;
     }
+    props.onConfirm({
+      name:enteredName,
+      address:enteredAddress,
+      postal:enteredPostal,
+      city:enteredCity
+    })
   };
 
   return (
@@ -88,7 +94,7 @@ const Checkout = (props) => {
           <button type="button" onClick={props.onCancel}>
             Cancel
           </button>
-          <button className={classes.submit}>Submit</button>
+          <button className={classes.submit} onClick={props.onConfirm}>Submit</button>
         </div>
       </form>
     </React.Fragment>
